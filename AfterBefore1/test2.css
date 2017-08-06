@@ -1,0 +1,69 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #e74c3c;
+}
+nav{
+	float: none;
+	margin: 10% auto;
+	background: #eee;
+	width: 30%;
+	clear: both;
+}
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li{
+	float: none;
+	width: 100%;
+}
+nav ul li a{
+	text-decoration: none;
+	padding: 20px;
+	width: 100%;
+	color: black;
+	border-left: 8px solid;
+	display: block;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-size: 18px;
+	position: relative;
+	z-index: 2;
+}
+nav ul li a:hover{
+	border-bottom: 0;
+	color: white;
+}
+nav ul li:first-child a{
+	border-left: 10px solid #3498db;
+}
+nav ul li:nth-child(2) a{
+	border-left: 10px solid #ffd071;
+}
+nav ul li:nth-child(3) a{
+	border-left: 10px solid #f0776c;
+}
+nav ul li:last-child a{
+	border-left: 10px solid #1abc9c;
+}
+
+nav ul li a:after{
+	content: '';
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	position: absolute;
+	transition: all .8s ease;
+	z-index: -1;
+}
+
+nav ul li a:hover:after{
+	width: 100%;
+}
+nav li:first-child a:after{ background: #3498db; }
+nav li:nth-child(2) a:after{ background: #ffd071; }
+nav li:nth-child(3) a:after{ background: #f0776c; }
+nav li:last-child a:after{ background: #1abc9c; }
